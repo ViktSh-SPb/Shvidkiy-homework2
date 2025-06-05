@@ -184,7 +184,7 @@ public class CustomLinkedList<T> {
             }
         } else {
             current = tail;
-            for (int i = size - 1; i > index; i++) {
+            for (int i = size - 1; i > index; i--) {
                 current = current.prev;
             }
         }
