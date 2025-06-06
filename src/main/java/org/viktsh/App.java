@@ -10,7 +10,8 @@ public class App
     {
         CustomLinkedList<String> testList = new CustomLinkedList<>();
         testList.add("hello");
-        testList.add(2,"World");
+        testList.add("World");
+        System.out.println(testList);
 
     }
 }
