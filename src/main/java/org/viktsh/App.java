@@ -41,7 +41,7 @@ public class App
                 .limit(3)
                 .peek(book -> System.out.println(book.getYear()))
                 .findFirst()
-                .forEach(b)
+                .ifPresentOrElse(book -> System.out.println(book.getYear()), ()-> System.out.println("Книга отсутствует"));
 
     }
 }
