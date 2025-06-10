@@ -193,16 +193,15 @@ public class CustomLinkedList<T> {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("[");
+        StringBuilder sb = new StringBuilder("CustomLinkedList");
         Node<T> current = head;
         while (current != null) {
-            sb.append(current.data);
+            sb.append("\n\t").append(current.data);
             if (current.next != null) {
                 sb.append(", ");
             }
             current = current.next;
         }
-        sb.append("]");
         return sb.toString();
     }
 

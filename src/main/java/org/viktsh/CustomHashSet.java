@@ -1,5 +1,6 @@
 package org.viktsh;
 
+
 /**
  * @author Viktor Shvidkiy
  */
@@ -113,5 +114,26 @@ public class CustomHashSet<E> {
         }
         int h = element.hashCode();
         return h ^ (h >>> 16);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("CustomHashSet");
+
+        boolean firstElement = true;
+
+        for (Node<E> head : buckets) {
+            Node<E> current = head;
+            while (current != null) {
+                if (!firstElement) {
+                    sb.append(", ");
+                }
+                sb.append("\n\t").append(current.value);
+                firstElement = false;
+                current = current.next;
+            }
+        }
+        return sb.toString();
     }
 }
